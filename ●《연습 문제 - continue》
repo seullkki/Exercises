@@ -1,0 +1,25 @@
+●《연습 문제 - continue》         →  Ex16 참고 / Practice 6
+
+
+
+Q. 1부터 100까지 5의 배수이자 7의 배수의 개수를 출력하는 소스코드를 continue를 이용해 작성하라
+
++   int num = 0;
+    int count = 0;
+
+    while((num++) < 100){                                        → 주의 사항 : 후위 연산자가 작동되는 위치
+          if((num % 5) != 0 || (num % 7) != 0) {                     (num++에 0이 들어가서 < 비교 연산 진행
+               continue;                                                이후에 +1되어 if 부터는 1이 됨)
+                                                                          (후위 증감 연산이 적용되는 때는 '연산'이
+          count++;                                                       한번이라도 진행되었으면 진행된다고
+          System.out.println(num);                                     보도록 하자. 즉, CPU에 한번 갔다가
+    }                                                                     왔다면 ? 후위 증감 진행됨)
+    System.out.println(count);
+
+
+
+Q. 1부터 100까지 짝수의 합을 구하라. continue 이용 가능? 가능
+
++ continue는 특정 조건을 제외하고 반복문을 돌려야 할 때 쓰면 좋음
+
+  
